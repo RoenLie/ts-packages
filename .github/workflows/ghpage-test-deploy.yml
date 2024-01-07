@@ -19,7 +19,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v2.4.0
         with:
           version: latest
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Build site
         run: |
-          cd packages/ghpages-test
+          cd packages/ghpage-test
           pnpm build
 
       - name: Upload artifact
