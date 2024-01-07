@@ -2,7 +2,7 @@ name: Build and deploy to gh-pages branch subdirectory
 
 on:
   push:
-    branches: ["ghpage-test"]
+    branches: ["testing-website-deploy"]
 
 jobs:
   build:
