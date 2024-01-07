@@ -36,3 +36,18 @@ jobs:
         with:
           name: ghpage-test
           path: packages/ghpage-test/dist/
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ghpage-test
+          path: ghpage-test
+
+      - name: Log files
+        run: ls -R .
+
+
+
