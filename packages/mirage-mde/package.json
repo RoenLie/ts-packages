@@ -5,8 +5,14 @@
 	"author": "Kristoffer Roen-Lie",
 	"license": "MIT",
 	"type": "module",
-	"main": "dist/lib/index.js",
-	"types": "dist/lib/index.d.ts",
+	"types": "./dist/lib/index.d.ts",
+	"main": "./dist/lib/index.js",
+	"exports": {
+		".": {
+			"types": "./dist/lib/index.d.ts",
+			"default": "./dist/lib/index.js"
+		}
+	},
 	"files": [
 		"dist/lib",
 		"src",
