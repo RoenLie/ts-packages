@@ -1,12 +1,16 @@
 {
 	"private": true,
+	"name": "name",
 	"description": "description",
+	"authors": "author",
+	"version": "1.0.0",
 	"type": "module",
+	"main": "pathToMain",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build"
 	},
 	"dependencies": {
-		"@roenlie/mirage-mde": "link:../mirage-mde"
+		"@roenlie/mirage-mde": "workspace:^"
 	}
 }
