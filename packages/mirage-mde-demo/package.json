@@ -1,0 +1,11 @@
+{
+	"private": true,
+	"description": "description",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build"
+	},
+	"dependencies": {
+		"@roenlie/mirage-mde": "workspace:^"
+	}
+}

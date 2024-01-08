@@ -1,0 +1,45 @@
+name: Mirage-MDE publish to NPMJS
+
+on:
+  push:
+    branches:
+      - packages/mirage-mde
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: packages/mirage-mde
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.10.0
+          registry-url: https://registry.npmjs.org/
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: latest
+
+      - name: Install dependencies.
+        run: pnpm install
+
+      - name: Build complete project.
+        run: |
+          cd packages/mirage-mde
+          pnpm build
+
+      - name: Change package version
+        run: |
+          cd packages/mirage-mde
+          pnpm increment-version
+
+      - name: Publish to npmjs
+        run: |
+          cd packages/mirage-mde
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
