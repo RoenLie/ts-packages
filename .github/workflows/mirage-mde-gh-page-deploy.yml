@@ -34,9 +34,8 @@ jobs:
 
       - name: Build demo site
         run: |
-          rm -rf node_modules
-          rm pnpm-lock.yaml
-          pnpm install
+          ls
+          ls packages/mirage-mde
           cd packages/mirage-mde-demo
           pnpm build
 
