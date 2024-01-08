@@ -1,4 +1,4 @@
-name: Build and deploy to gh-pages branch subdirectory
+name: mirage-mde, deploy to gh-pages branch subdirectory
 
 on:
   push:

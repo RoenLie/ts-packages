@@ -67,17 +67,6 @@
 		</a>
 	</div>
 
-	<script type="module">
-		import "@roenlie/mirage-mde";
-		import {testDoc} from './src/doc-example.ts';
-
-		const mde = document.createElement('mirage-mde');
-		mde.options = {
-			initialValue: testDoc
-		};
-
-		const wrapperEl = document.querySelector('.wrapper');
-		wrapperEl.appendChild(mde);
-	</script>
+	<script type="module" src="./src/main.ts"></script>
 </body>
 </html>
