@@ -37,6 +37,7 @@ jobs:
       - name: Build demo site
         run: |
           cd packages/mirage-mde-demo
+          pnpm install
           pnpm build
 
       - name: Upload artifact
