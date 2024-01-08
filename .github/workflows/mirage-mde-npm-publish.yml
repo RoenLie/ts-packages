@@ -1,4 +1,4 @@
-name: Mirage-MDE publish to NPMJS
+name: mirage-mde, publish to npmjs
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.4
+        uses: pnpm/action-setup@v2.4.0
         with:
           version: latest
 
