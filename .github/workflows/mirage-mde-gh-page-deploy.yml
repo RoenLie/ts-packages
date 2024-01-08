@@ -34,11 +34,6 @@ jobs:
 
       - name: Build demo site
         run: |
-          ls
-          echo "whyyyyyy"
-          ls packages/mirage-mde/dist/lib
-          cd packages/mirage-mde-demo
-          ls
           pnpm build
 
       - name: Upload artifact

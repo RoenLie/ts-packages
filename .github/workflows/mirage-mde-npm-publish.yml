@@ -3,7 +3,7 @@ name: mirage-mde, publish to npmjs
 on:
   push:
     branches:
-      - packages/mirage-mdedawdadawd
+      - packages/mirage-mde
 
 jobs:
   publish-npm:
