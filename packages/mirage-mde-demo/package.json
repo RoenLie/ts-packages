@@ -7,6 +7,6 @@
 		"build": "vite build"
 	},
 	"dependencies": {
-		"@roenlie/mirage-mde": "workspace:^"
+		"@roenlie/mirage-mde": "link:../mirage-mde"
 	}
 }

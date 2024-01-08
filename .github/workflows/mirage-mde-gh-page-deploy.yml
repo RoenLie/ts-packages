@@ -25,9 +25,7 @@ jobs:
           version: latest
 
       - name: Install dependencies.
-        run: |
-          cd packages/mirage-mde
-          pnpm install
+        run: pnpm install
 
       - name: Build library
         run: |
@@ -37,7 +35,6 @@ jobs:
       - name: Build demo site
         run: |
           cd packages/mirage-mde-demo
-          pnpm install
           pnpm build
 
       - name: Upload artifact
